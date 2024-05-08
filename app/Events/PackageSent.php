@@ -34,12 +34,13 @@ class PackageSent implements  ShouldBroadcast
      */
     public function broadcastOn(): array
     {
-//        return [
-//            new PrivateChannel('channel-name'),
-//        ];
         return [
-            new Channel('delivery'),
+            new PrivateChannel('channel-name'),
         ];
+
+//        return [
+//            new Channel('delivery'),
+//        ];
 
         //sreturn new Channel('delivery');
     }

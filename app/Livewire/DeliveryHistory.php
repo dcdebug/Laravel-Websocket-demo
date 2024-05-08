@@ -19,7 +19,8 @@ class DeliveryHistory extends Component
         $this->reset('status');
     }
 
-    #[On('echo:delivery,PackageSent')]
+//    #[On('echo:delivery,PackageSent')]
+    #[On('echo-private:delivery,PackageSent')]
     public function onPackageSent($event)
     {
         $this->packageStatuses[] = $event;
